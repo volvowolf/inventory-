@@ -19,6 +19,13 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
             margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .image-column {
+            flex: 0 0 calc(33.33% - 20px); /* Adjust width and gap as needed */
         }
 
         img {
@@ -40,14 +47,20 @@
         <h2>Beautiful Design with Google Fonts</h2>
         <p>This is a sample design with beautiful text, images, and comments. It is styled with the 'Open Sans' font from Google Fonts.</p>
 
-        <img src="https://via.placeholder.com/600x300" alt="Beautiful Image">
-        <p class="comment">A beautiful image with a lovely comment.</p>
+        <div class="image-column">
+            <img src="https://via.placeholder.com/600x300" alt="Beautiful Image">
+            <p class="comment">A beautiful image with a lovely comment.</p>
+        </div>
 
-        <img src="https://via.placeholder.com/600x400" alt="Another Beautiful Image">
-        <p class="comment">Another stunning image with a thoughtful comment.</p>
+        <div class="image-column">
+            <img src="https://via.placeholder.com/600x400" alt="Another Beautiful Image">
+            <p class="comment">Another stunning image with a thoughtful comment.</p>
+        </div>
 
-        <img src="https://via.placeholder.com/600x200" alt="Yet Another Beautiful Image">
-        <p class="comment">Yet another gorgeous image with an insightful comment.</p>
+        <div class="image-column">
+            <img src="https://via.placeholder.com/600x200" alt="Yet Another Beautiful Image">
+            <p class="comment">Yet another gorgeous image with an insightful comment.</p>
+        </div>
     </div>
 
 </body>
