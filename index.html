@@ -93,12 +93,12 @@
     </div>
 
     <script>
-        function generatePDF() {
-            html2canvas(document.querySelector(".pdf-content")).then(canvas => {
-                var pdf = new jsPDF();
-                pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, pdf.internal.pageSize.getWidth(), pdf.internal.pageSize.getHeight());
-                pdf.save("beautiful_pdf_copy.pdf");
-            });
+        async function generatePDF() {
+            const content = document.querySelector(".pdf-content");
+            const canvas = await html2canvas(content);
+            const pdf = new jsPDF();
+            pdf.addImage(canvas.toDataURL("image/jpeg", 1.0), "JPEG", 0, 0, pdf.internal.pageSize.width, pdf.internal.pageSize.height);
+            pdf.save("beautiful_pdf_copy.pdf");
         }
     </script>
 
